@@ -1,0 +1,23 @@
+6502 to IntyBASIC compiler. http://nanochess.org/
+by Oscar Toledo G.
+
+Usage:
+
+    c6502 input.rom output.bas
+
+Only 4K Atari VCS ROMs supported, and it will generate
+non-working programs that need a LOT OF ADAPTATION.
+
+Several instructions aren't implemented.
+
+This is a programming aberration, I wrote this to see how easy
+would be to port Atari VCS games to Intellivision, but the
+resulting code is way too slow for any practical use.
+
+You can add the following line at start of program to ease
+adaptation:
+
+    DIM zp(256) AT $00F0
+
+This will tell IntyBASIC to map the 256 bytes RAM memory of
+Atari at a fixed position in memory.
